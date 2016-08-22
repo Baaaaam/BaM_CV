@@ -1,0 +1,124 @@
+ %%% cv.ltx
+
+%% Author:        Didier Verna <didier@lrde.epita.fr>
+%% Maintainer:    Didier Verna <didier@lrde.epita.fr>
+%% Created:       Fri May 21 18:07:48 1999 under XEmacs 21.2 (beta 12)
+%% Last Revision: Mon Jul 12 12:00:43 1999
+
+
+%%% Commentary:
+
+%% Contents management by FCM version 0.1.
+
+%\typein[\draftorfinal]{Please specify draft or final (draft by default):}
+%\ifx\draftorfinal\empty
+%  \def\draftorfinal{draft}
+%\fi
+
+\NeedsTeXFormat{LaTeX2e}
+\documentclass[11pt,french,a4paper,skipsamekey,revbib]{curve}
+\usepackage[a4paper,nohead,nofoot,hmargin=1.5cm,vmargin=1.5cm]{geometry}
+%\usepackage{floatflt}
+\usepackage[francais]{babel}
+%\usepackage[applemac]{inputenc}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathpazo}
+\usepackage[scaled=1]{helvet}
+\usepackage{courier}
+\usepackage{amsmath,amssymb,accents}
+
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{units}
+\usepackage{comment}
+\usepackage{cite}
+
+\usepackage[backref,pagebackref,naturalnames=true,colorlinks]{hyperref}
+\hypersetup{pdftitle={Curiculum Vitae},
+  pdfauthor={Baptiste Mouginot, Assistant Visitor Scientist, Uniersity of
+    Wisconsin-Madison,
+    <mouginot.baptiste@gmail.com>},
+  linkcolor={red}
+}
+
+\usepackage{xspace}
+\newcommand\lrde{\textsc{Lrde}\xspace}
+\newcommand\epita{\textsc{Epita}\xspace}
+
+\photo[r]{image}
+\photoscale{0.12}
+\leftheader{\textcolor{white}{blank}\\
+  \textbf{Baptiste MOUGINOT}\\
+  Visitor Scientist, University of Wisconsin-Madison\\
+  Department of Nuclear Engineering\\
+  434 Engineering Research Building\\
+  1500 Engineering Dr., Madison, WI 53706\\
+  +1 (608)-338-3481/\href{mailto:mouginot.baptiste@gmail.com}{mouginot.baptiste@gmail.com}\\
+}
+
+\rightheader{~}
+
+\rubricfont{\fontfamily{pag}\selectfont\bfseries\Large}
+\subrubricfont{\usefont{T1}{phv}{m}{n}\selectfont\bfseries\Large} 
+\subrubricalignment{l}
+\keyfont{\bfseries}
+
+\usepackage{pifont}
+\prefix{}
+\continuedname{}
+
+\renewcommand\arraystretch{1.2}
+
+
+\usepackage{color}
+\makeatletter
+% Cross the rubric titles:
+\def\@@rubrichead#1{%
+  \@rubricfont%
+  \makebox[0pt][l]{\colorbox[gray]{1}{\makebox[\linewidth-4\fboxsep]{}}}%
+  \makebox[\linewidth-2\fboxsep][c]{#1}}
+% or underline them:
+\iffalse
+\def\@@rubrichead#1{%
+  \@rubricfont%
+  \makebox[0pt][l]{\rule[-2mm]{\linewidth}{1mm}}%
+  \makebox[\linewidth-2\fboxsep][c]{#1}}
+\fi
+\def\@@subrubric#1{%
+  \rule{0bp}{\@beforespace}
+       {\@subrubricfont%
+         \makebox[0ex][l]{\colorbox[gray]{1}{\textcolor[gray]{1}{M}}}#1}%
+       \@subrubricmark{#1}}
+
+\newcommand{\boldarrayrulewidth}{1\p@} 
+\def\bhline{\noalign{\ifnum0=`}\fi\hrule \@height  
+  \boldarrayrulewidth \futurelet \@tempa\@xhline}
+\def\@xhline{\ifx\@tempa\hline\vskip \doublerulesep\fi
+  \ifnum0=`{\fi}}
+\newcommand{\br}{\ms\bhline\ms}
+\newcommand{\mr}{\ms\hline\ms}
+\newcommand{\ms}{\noalign{\vspace{3\p@ plus2\p@ minus1\p@}}}
+\makeatother
+
+\headerscale{.55}
+\newcommand{\HRule}{\rule{\linewidth}{0.1mm}}
+
+\makeatletter
+\def\mymulticol{\@nextentry\noalign{\gdef\@nextentry{}}
+ \multicolumn}
+\makeatother
+\pagestyle{empty}
+
+\begin{document}
+\makeheaders[t]
+\makerubric{experience}
+\newpage
+\makerubric{bib}
+\newpage
+\makerubric{reference}
+\newpage
+%\makerubric{research}
+%\makerubric{biblio}
+\end{document}
+

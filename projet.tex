@@ -1,0 +1,176 @@
+\documentclass[12pt]{article}
+
+\usepackage[francais]{babel}
+%\def\printlandscape{\special{landscape}}    % Works with dvips.
+%\usepackage{pstricks,pst-node,pst-tree}
+%\usepackage{amssymb}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc} 
+%\usepackage{fancybox} % for shadow and Bitemize
+%\usepackage{alltt}
+%\usepackage{graphicx}
+%\usepackage{epsfig}
+\usepackage{fullpage}
+%\usepackage{helvet}
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\usepackage{moreverb}
+%\usepackage{xspace}
+%\usepackage[colorlinks,hyperindex,bookmarks,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+%\usepackage{wrapfig}
+%\usepackage{epsf}
+
+\title{Projet de Recherche}
+\author{MOUGINOT Baptiste}
+\date{\today}
+ %        \usepackage{helvet}
+\begin{document}
+
+\maketitle
+%\tableofcontents
+\subsection*{Contexte des études de transmutation en \textit{ADS} à Subatech}
+
+
+La gestion optimisée des déchets radioactifs de haute activité et à vie longue va être discutée au parlement en 2012. Une partie des études réalisées dans ce cadre concerne l'incinération des actinides mineurs, ceux-ci étant les principaux responsables de la radiotoxicité des déchets nucléaires sur le long terme.
+
+Les principaux déchets issus des centrales actuelles, en terme de radiotoxicité sont les produits de fission et les actinides mineurs (neptunium, américium et curium). Ces derniers, et particulièrement l'américium, sont largement dominants sur le long terme. Trois stratégies de transmutation se distinguent :
+\begin{itemize}
+\item l'américium uniquement,
+\item l'américium et le neptunium,
+\item l'américium, le neptunium et le curium.
+\end{itemize}
+
+
+
+Il a été montré \cite{varaine.EJC.2006} que l'utilisation de neutrons rapides est impérative si l'on veut favoriser les fissions des actinides mineurs par rapport à la capture neutronique. Parmi les systèmes nucléaires potentiels à spectre rapide figure le concept de réacteurs sous-critiques pilotés par accélérateur, appelé aussi Accelerator Driven System (\textit{ADS})\cite{ADS.ENEA.2001}. Ainsi, le texte législatif (loi n$\degres$2006-739 du 28 juin 2006) qui prépare la discussion parlementaire de 2012 et qui fixe les orientations des recherches mentionne explicitement les \textit{ADS} pour la transmutation des déchets. Les \textit{ADS} sont donc des systèmes dont le potentiel est à évaluer précisément, en parallèle aux études menées sur les systèmes de génération IV, tels que les Réacteurs à Neutrons Rapides au Sodium (\textit{RNR}-Na) ou les Réacteurs à Neutrons Rapides au Gaz (\textit{RNR}-Gaz). La mention "dédiés à la transmutation" suggère que la vocation des \textit{ADS} n'est pas de fournir de l'électricité. Cela impose de considérer un parc de base électrogène, constituant la première strate dont les déchets produits seront séparés puis introduits dans une deuxième strate incinératrice, composée d'\textit{ADS}. Les strates électrogènes que nous allons prendre en compte dans nos études se composent de Réacteurs à Eau Pressurisée (\textit{REP}) ou de Réacteurs à Neutrons Rapides à caloporteur Sodium (\textit{RNR}-Na). Dans les deux cas, le multi-recyclage du plutonium sous forme de MOX sera considéré. En effet, l'incinération des actinides mineurs n'est intéressante que si une stratégie fermée de gestion du plutonium est mise en \oe uvre afin de limiter son inventaire.
+
+
+La plupart des concepts d'\textit{ADS} étudiés aujourd'hui est constituée d'une cible de production de neutrons située au centre d'un c\oe ur qui contient la matière fissile. Les neutrons sont créés par réactions de spallation induites par un flux de protons de haute énergie et de haute intensité. Ce flux de neutrons permet d'initier les réactions de fission dans le c\oe ur du réacteur, conçu pour "s'éteindre" sans cet apport externe. En effet, le nombre de neutrons créés par les fissions successives ne suffit pas à compenser les pertes par fuite et par absorption. On a donc un système intrinsèquement sous-critique. Néanmoins, cette sous-criticité limite la quantité de combustible qu'il est possible d'irradier. 
+
+
+Au niveau européen, le projet \textit{MYRRHA/XT-ADS} vise à construire un concept de réacteur hybride expérimental pour une première démonstration mondiale d'un \textit{ADS} et pour ouvrir la voie vers un futur démonstrateur industriel. En France, les études systèmes sur les \textit{ADS} sont couplées à des études de scénarios de déploiement des réacteurs hybrides dédiés à la transmutation des actinides mineurs.
+
+
+
+La transmutation des actinides mineurs à l'aide d'\textit{ADS} a fait l'objet d'un certain nombre d'études en France depuis une quinzaine d'années \cite{massara.GEPEPEON.2006,grouiller.GEPEPEON.2007}. Dans l'ensemble des scénarios étudiés, les concepts considérés ont une puissance thermique inférieure à $600~$GWth, à l'instar des prototypes de recherche ou industriels en développement en Europe.
+
+
+Cependant, ni la densité de puissance ni les temps d'irradiation n'ont été optimisés pour ces concepts, ce qui implique que les inventaires d'actinides mineurs présents en c\oe ur et en cycle soient relativement élevés comparés à la transmutation homogène réalisée en réacteur rapide au sodium. Enfin, la faible puissance unitaire du concept de référence conduit à un nombre important d'\textit{ADS} pouvant absorber le flux d'actinides mineurs provenant de la strate électrogène.
+
+
+
+Afin de revisiter le potentiel des \textit{ADS}, un concept original a été développé au sein du groupe ERDRE du laboratoire SUBATECH qui permet d'augmenter la taille de la zone irradiée, la puissance thermique du système et donc la quantité d'actinides mineurs transmutée par \textit{ADS}.
+Les \textit{ADS} "MUltiple Spallation Target" (\textit{MUST}) consistent à combiner plusieurs cibles de spallation afin d'augmenter le flux neutronique entre elles. Ce flux est faiblement dépendant de la stratégie de transmutation (les sections efficaces macroscopiques d'absorption et de fission restent du même ordre de grandeur), mais dépend fortement du libre parcours moyen des neutrons dans le système. Le parcours des neutrons dans le c\oe ur est fortement corrélé au choix de caloporteur du réacteur (fluide destiné à refroidir le système) qui compose près de $50\%$ du milieu réactif. Nos efforts se concentrent particulièrement sur le dimensionnement de ces \textit{ADS} de grande puissance, à partir de calculs de neutronique puis de thermohydraulique. Nous calculons ensuite les efficacités de transmutation des systèmes retenus.
+
+\subsection*{Projet de Recherche}
+
+Il est apparu que l'ensemble des programmes existants destinés à réaliser des projections de scénarios électronucléaires (tel que \textit{COSI} développé par le CEA) se prête mal à l'implémentation de nouveaux concepts de réacteurs ainsi qu'à l'étude de scénarios "innovants". C'est pourquoi, il me parait indispensable de développer un outil stable et ouvert destiné à l'in2p3, afin que l'ensemble de la communauté puisse réaliser les scénarios nécessaires à leurs recherches.
+
+\subsubsection*{Écriture d'un code de scénarios "in2p3"}
+Le code que nous développerions à terme en collaboration avec l'Institut de Physique Nucléaire d'Orsay, sur les bases réalisées pour nos études de scénarios doubles strates, se présenterait sous la forme de librairie C++, gérant l'ensemble des phases clefs de l'étude de scénarios.
+ 
+Il sera possible d'y implémenter des usines de traitement, dont le rôle sera de récupérer le combustible usé issu des différents réacteurs, de le faire refroidir en piscine puis de séparer les produits revalorisables des déchets ultimes. On y trouvera également des réacteurs gérant l'évolution du combustible en c\oe ur à partir d'une simple base de données formatée, en régime transitoire ou à l'équilibre.
+
+
+Contrairement aux programmes de scénarios existants, le but de ce code est de rester souple, en permettant à l'utilisateur de faire exactement ce qu'il souhaite, l'ensemble des paramètres clefs étant accessible et modifiable... Par exemple, si l'on veut réaliser un scénario utilisant des réacteurs innovants, il suffit de générer la base de données formatée correspondante.
+
+A l'instar de \textit{MURE} (MCNP Utility for Reactor Evolution)\footnote{Utilisé par l'ensemble des groupes de recherche de l'in2p3 réalisant de la simulation de c\oe urs.} \cite{mure.web}, le but est de permettre aux utilisateurs d'améliorer et de corriger le code, en y apportant leur contribution via une correction de bugs ou l'ajout d'un module ou d'une fonctionnalité permettant ainsi d'accroître la richesse et la profondeur des scénarios simulés.
+
+L'avantage majeur d'avoir un code ouvert à l'utilisateur est la possibilité quasi sans limite de simulation de scénarios. Il serait possible de mener des études précises des transitions envisageables entre les technologies actuelles et les technologies futures.
+
+
+A long terme, je souhaiterais continuer à développer ce programme, en y intégrant :
+\begin{itemize}
+\item l'estimation des risques liés à la manipulation et au transport de matières radioactives,
+\item l'évaluation aux risques relatifs à la mise en place de nouvelles filières,
+\item la gestion du démantèlement des anciennes centrales arrivées en fin de vie.
+\end{itemize}
+De telles évolutions permettraient de prendre en compte les difficultés de gestion et de manutention des déchets radioactifs.
+
+Il est également essentiel de développer un module permettant de gérer les évolutions du parc simulé, en fonction de différents critères d'optimisation : évolution de la demande énergétique, coût des installations... De plus, un tel module permettrait, entre autres, d'optimiser l'implantation de nouvelles centrales, privilégiant certains types de centrales au regard de l'évolution des stocks en combustible.
+
+Le bon fonctionnement d'un tel programme de calculs de scénarios électronucléaires repose, en partie, sur la richesse de ses bases de données, permettant d'intégrer l'ensemble des réacteurs actuels et futurs au parc simulé. C'est pourquoi, je souhaiterais faire de ce programme un outil utilisable par l'ensemble de la communauté scientifique et de continuer à le faire évoluer en fonction des besoins.
+
+
+
+
+\subsubsection*{Scénarios \textit{ADS} étendus }
+L'épuisement des ressources fossiles, le changement climatique ainsi que la croissance de la demande énergétique mondiale exigent une redéfinition de la place du nucléaire comme source d'énergie sur le long terme. Au sein de ce processus, les nouveaux concepts de réacteurs devront intégrer des valeurs du développement durable telles que la sûreté, l'optimisation des ressources, la résistance à la prolifération et aux agressions externes ainsi que la minimisation des déchets.
+
+Mon projet de recherche s'inscrit dans le cadre des études de scénarios électronucléaires, dans la continuité de ceux réalisés par le groupe ERDRE de Subatech. Ceux-ci permettent de mettre en évidence les véritables apports et contraintes qu'engendrent les nouveaux systèmes de réacteurs et de cycles associés tant au niveau de situations d'équilibre que dans les phases de transition pour passer d'une stratégie à une autre. Différentes perspectives s'affrontent aujourd'hui, en particulier autour du déploiement rapide ou non de réacteurs retenus dans le cadre du forum Génération IV. Les scénarios à étudier se dessinent en fonction de l'hypothèse sur la ressource en uranium. 
+
+
+Dans l'hypothèse d'une ressource en uranium trop chère, le déploiement de réacteurs surgénérateurs devient une nécessité. Les réacteurs de génération IV définis dans le cadre du forum international GEN IV \cite{GENIV} sont au nombre de six : les réacteurs à neutrons rapides à caloporteur sodium, plomb ou gaz, le VHTR "Very High Temperature Reactor", le RESC "Réacteur à Eau Supercritique" et enfin le réacteur à sel fondu. Il devient donc intéressant d'évaluer des scénarios basés sur le déploiement de réacteurs de ce type. Ces réacteurs étant en théorie capables de transmuter les actinides mineurs, il convient d'évaluer l'impact de la mise en \oe uvre de la transmutation sur ces systèmes. En parallèle, nous nous proposons de comparer cette stratégie avec une stratégie de transmutation dans des \textit{ADS} dédiés. Dans cette hypothèse, des scénarios symbiotiques sont également envisagés. Le principe est de coupler des réacteurs à eau lourde (Candu) ayant un taux de conversion excellent (réduction d'un facteur 5 à 10 la consommation d'uranium naturel) couplés avec des \textit{RNR} basés sur le cycle du thorium difficilement régénérateur.\footnote{On peut également imaginer un couplage \textit{RNR} thorium/REP en augmentant les taux de conversion de ces derniers à l'aide d'une sous-modération accrue, par exemple en utilisant de l'eau lourde à la place de l'eau légère.}
+
+
+A contrario, un prix de l'uranium raisonnable ne nécessite pas la mise en \oe uvre de la surgénération et les centrales des générations actuelles sont adaptées aux besoins. S'il n'y a pas de réelle nécessité de déployer des réacteurs surgénérateurs de génération IV, les filières actuelles peuvent jouer un rôle central dans l'avenir. En effet, leur technologie mature permettrait de répondre à des exigences de sûreté de plus en plus fortes. Nous souhaitons nous concentrer sur la technologie EPR, ainsi que le CANDU.
+Toujours dans l'hypothèse d'une gestion optimisée des déchets nucléaires, nous nous proposons d'étudier l'apport de la mise en \oe uvre d'une stratégie de transmutation des actinides mineurs. Il convient donc de considérer un multi recyclage du plutonium au niveau de la strate électrogène. Une strate incinératrice sera donc prise en compte. Le choix de ces réacteurs est contraint en premier lieu par la nécessité d'avoir un spectre de neutrons rapides. Nous allons prendre en compte le \textit{RNR}-Na et le \textit{RNR}-Gaz, ainsi que les \textit{ADS}.
+
+
+Dans ces deux cas, il convient d'étudier les moyens de limiter la quantité de déchets nucléaires afin de tendre vers une gestion la plus optimisée possible de ces déchets. Dans ce cadre, la mise en place d'une stratégie de gestion des actinides mineurs implique le multi-recyclage du plutonium sous forme de MOX.
+
+L'évaluation de l'ensemble de ces scénarios constitue un défi à relever. En effet, le développement de l'industrie nucléaire est intimement lié à l'opinion publique, pour qui la gestion optimisée des déchets nucléaires semble être un paramètre important.
+
+
+
+\subsubsection*{Scénarios de Fin de Jeu}
+Dans l'hypothèse contraire, de sortie plus ou moins rapide sur quelques décennies du nucléaire, les éléments considérés à l'heure actuelle comme revalorisables (dans les nouvelles générations de centrales) ne le seraient plus. C'est notamment le cas du plutonium, qui constitue près de $90\%$ des produits radiotoxiques des centrales actuelles. Une sortie du nucléaire électrogène aurait donc pour effet d'augmenter d'un ordre de grandeur la quantité de déchets à gérer. L'étude de différents scénarios de "Fin de Jeu" serait donc particulièrement intéressante, afin de comparer les différentes options possibles quant à la gestion de ces matières dans les cas suivants :
+\begin{itemize}
+\item sortie du nucléaire programmé pour 2020,
+\item non renouvellement des \textit{REP} actuels, le dernier serait arrêté en 2040,
+\item remplacement progressif des \textit{REP} par des \textit{EPR} exploités jusqu'en 2100,
+\item remplacement progressif des \textit{REP} par des \textit{EPR} et intégration de surgénérateurs \textit{RNR}-Na au parc.
+\end{itemize}
+Dans l'ensemble des scénarios d'intérêt, il serait indispensable d'évaluer l'impact des différentes stratégies d'incinération, nécessaires pour gérer les inventaires de matières radioactives. L'incinération impliquerait soit des réacteurs présents adaptés aux besoins (\textit{REP} et/ou \textit{RNR}) soit des systèmes hybrides dédiés.
+\\
+\\
+\\
+J'aimerais de plus dans les deux études de scénarios présentées précédemment, améliorer les concepts d'\textit{ADS} \textit{MUST} utilisés, en y intégrant des dispositions hétérogènes d'assemblage, afin d'optimiser la forme des flux et donc d'améliorer leurs capacités de transmutation.
+
+
+
+\subsubsection*{"Etude de cas" de prolifération à partir d'\textit{ADS}}
+
+Les autres activités du groupe ERDRE de SUBATECH sont principalement centrées sur la physique des antineutrinos des réacteurs, en particulier pour en faire des outils de surveillance de la composition des c\oe urs. Il s'agit d'un sujet suscitant l'intérêt de l'Agence Internationale de l'Energie Atomique (AIEA). Les recherches à ce propos sont menées dans le groupe selon trois axes : l'amélioration de notre connaissance des caractéristiques des antineutrinos des réacteurs nucléaires (simulations et expériences de physique nucléaire), le développement d'un détecteur d'antineutrinos démonstrateur dédié à la non-prolifération (Nucifer) et des études de cas de prolifération incluant les antineutrinos à partir de différents concepts de réacteurs \footnote{Ce genre d'étude vise à estimer l'impact d'une extraction de matières radioactives dans un c\oe ur sur le spectre d'antineutrinos.}.
+
+Le groupe a déjà réalisé ce genre d'étude pour différents types de réacteurs classiques, type Candu (réputé proliférant) et REP chargé en combustible UOx et Th/Pu. Plus récemment dans le cadre de la thèse de Sandrine Cormon, des études ont été faites pour des réacteurs de Génération IV : des réacteurs à très haute température (\textit{VHTR}) (un Pebble Bed Reactor (\textit{PBR}) avec différents types de combustibles) et un \textit{RNR} à caloporteur sodium avec couvertures chargées en uranium appauvri ou en actinides mineurs. Ces résultats ont été présentés à l'AIEA.
+De telles activités de simulation permettent de quantifier l'apport des antineutrinos dans la surveillance des réacteurs du futur \cite{cormon.ICAPP.2011}. Ces études serviront de guide pour le développement des futurs détecteurs et permettront d'envisager l'insertion de la détection des antineutrinos dans les méthodes de surveillance de l'AIEA. Bien entendu les \textit{ADS}, pour lesquels la détection des antineutrinos pourrait constituer un moyen de surveillance non intrusif, figurent également parmi les concepts futurs que l'AIEA souhaite caractériser.
+
+C'est pourquoi, je propose d'étudier des cas de prolifération avec des \textit{ADS}. Il s'agit, dans un premier temps, de caractériser l'émission d'antineutrinos des concepts d'\textit{ADS} sélectionnés et d'étudier les différences induites par l'emploi de différents types de combustibles (en fonction de la concentration en actinides mineurs mais aussi en autres noyaux comme le 238Pu). Dans un second temps, il s'agira de calculer la sensibilité de la détection des antineutrinos au détournement d'une quantité significative de combustible.
+
+Selon moi, ces travaux ouvrent deux perspectives à long terme. Il serait intéressant de coupler les études de prolifération du CNRS avec des scénarios de parcs électronucléaires. En effet, il est possible d'intégrer des critères constituant une limite à la prolifération à la simulation de scénarios électronucléaires. Ces critères dépendraient par exemple du concept de réacteur, du type de combustible, de la sensibilité des antineutrinos mais également seraient liés à la neutronique associée au réacteur et son combustible. Il serait ensuite possible de mener des études pour l'AIEA, leur permettant ainsi d'avoir une meilleure visibilité sur les contraintes et les limites associées aux futurs concepts de réacteurs et aux futurs combustibles.
+
+La seconde concerne la connexion avec la physique nucléaire expérimentale, que je développe ci-dessous.
+
+\subsubsection*{Connexion avec la physique nucléaire expérimentale}
+
+Les caractéristiques des antineutrinos émis par les combustibles innovants sont mal connues. La seule façon de les calculer est d'utiliser les données de décroissance $\beta$ des produits de fission. C'est ce que fait le groupe de Nantes à l'aide d'un couplage entre le programme \textit{MURE} \cite{mure.web} et les bases de données nucléaires.
+
+Cependant, il est nécessaire d'estimer les erreurs systématiques associées à ces spectres calculés et de déduire une liste des noyaux ayant le plus d'impact sur celles-ci. Il sera nécessaire d'étudier ces noyaux expérimentalement afin de gagner en prédictibilité sur les spectres d'antineutrinos.
+A l'heure actuelle, la liste de noyaux principaux pour le spectre d'antineutrinos émis par les réacteurs types REP est relativement bien connue, néanmoins cette étude doit être complétée pour les autres concepts de réacteurs utilisant d'autres combustibles (ou des spectres neutroniques différents).
+
+Ce genre d'étude rejoint celle menée par une récente collaboration entre SUBATECH, l'IPN d'Orsay et le LPSC de Grenoble qui a pour objectif de déterminer les mesures à réaliser afin d'obtenir une estimation satisfaisante de la puissance résiduelle après l'arrêt des réacteurs à neutrons rapides. La puissance résiduelle caractérise les probabilités d'avoir une réaction en chaîne non-contrôlée après l'arrêt du réacteur et constitue donc un enjeu majeur de sûreté.
+
+Un certain nombre de noyaux sont d'intérêt commun entre les deux thématiques. C'est pourquoi, le groupe ERDRE a débuté une collaboration expérimentale avec le laboratoire de Valencia en Espagne afin de mesurer les caractéristiques de décroissance $\beta$ de produits de fission sélectionnés comme importants pour la puissance résiduelle et pour les antineutrinos des réacteurs de type REP. 
+
+Il s'agit d'expériences réalisées notamment à l'Université de Jyvaskyla en Finlande utilisant la technique de spectroscopie $\gamma$ par absorption totale (TAGS) \cite{tain.ICNDST.2010}. Participer à ces expériences serait l'occasion pour moi de faire bénéficier le groupe de mon expertise de thèse en spectroscopie nucléaire et de renforcer le groupe dans ses activités expérimentales reliées à la physique des réacteurs. Je pourrais adjoindre cet aspect expérimental à mes travaux de simulations de réacteurs et de scénarios, réaliser d'éventuels développements instrumentaux et devenir une force de proposition pour de nouvelles expériences dans cette thématique. Je pourrais, notamment, réaliser les calculs nécessaires pour estimer la puissance résiduelle associée aux différents concepts \textit{ADS} et établir quelles sont les mesures à effectuer pour diminuer l'erreur systématique associée à cette grandeur. 
+
+\subsection*{Conclusion}
+Le fait d'avoir commencé à développer un programme de scénarios dans le cadre de nos études sur la transmutation double strate des actinides mineurs à l'aide d'ADS me pousse à vouloir poursuivre dans cette voie prometteuse. En effet, l'acquisition d'un outil multi-critère d'évaluation de scénarios électronucléaires apparaît indispensable à l'in2p3. Cela permettrait de fournir des évaluations scientifiques alternatives et originales sur un ensemble de choix possibles concernant le nucléaire du futur. 
+
+Je souhaiterais également utiliser ce programme pour l'étude de scénarios de Fin de Jeu mettant en jeu des \textit{ADS} et étendre nos études actuelles "\textit{ADS} double strate", mais également les enrichir d'aspects de non prolifération, à travers la simulation de spectres caractéristiques d'antineutrinos et la mesure des données nucléaires nécessaires à leur obtention.
+
+
+Mon profil, mi expérimental mi simulation, me permettrait de m'intégrer rapidement et de renforcer l'ensemble des recherches menées par le groupe ERDRE de Subatech.
+De plus, je me suis bien inséré dans ma nouvelle thématique et ma nouvelle équipe depuis mon arrivée et pouvoir y réaliser mon projet de recherche me motiverait énormément, à la fois sur un plan professionnel et sur un plan personnel.
+Néanmoins mon profil et mon projet de recherche me permettraient de m'insérer également dans d'autres équipes des laboratoires de l'IN2P3 travaillant dans cette thématique.
+
+
+
+
+
+%-----------------------------------------------------------
+\bibliographystyle{perso}
+\bibliography{Biblio}
+\end{document}
